@@ -1,7 +1,7 @@
 package com.diana.application.data.network;
 
 import com.diana.application.data.model.ProductList;
-import com.diana.application.data.model.ProductResponcse;
+import com.diana.application.data.model.ProductResponce;
 
 import io.reactivex.Observable;
 import retrofit2.http.GET;
@@ -18,5 +18,5 @@ public interface ApiService {
     Observable<ProductList> getProductList(@Query("page") int page, @Query("category") String category);
 
     @GET("api/v1/products/{id}.json")
-    Observable<ProductResponcse> getProduct(@Path("id") long id);
+    Observable<ProductResponce> getProduct(@Path("id") long id);
 }
