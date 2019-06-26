@@ -1,6 +1,6 @@
 package com.diana.application.data.db;
 
-import com.diana.application.data.model.Card;
+import com.diana.application.data.model.Cart;
 import com.diana.application.data.model.Product;
 
 import java.util.List;
@@ -36,6 +36,13 @@ public class LocalDataImpl implements ILocalData {
     }
 
     @Override
+    public RealmResults<Cart> getCartByProduct(long id) {
+        return realm.where(Cart.class)
+               .equalTo("productId", id)
+                .findAllAsync();
+    }
+
+    @Override
     public void saveProduct(final List<Product> product) {
 
         realm.executeTransactionAsync(new Realm.Transaction() {
@@ -52,7 +59,7 @@ public class LocalDataImpl implements ILocalData {
         realm.executeTransactionAsync(new Realm.Transaction() {
             @Override
             public void execute(Realm realm) {
-                Card card = new Card();
+                Cart card = new Cart();
                 card.setProductId(id);
                 realm.copyToRealmOrUpdate(card);
             }
@@ -63,7 +70,7 @@ public class LocalDataImpl implements ILocalData {
 
     @Override
     public long getCartCount() {
-        return realm.where(Card.class).count();
+        return realm.where(Cart.class).count();
     }
 
     @Override
@@ -73,7 +80,7 @@ public class LocalDataImpl implements ILocalData {
             @Override
             public void execute(Realm realm) {
 
-                RealmResults<Card> realmResults = realm.where(Card.class)
+                RealmResults<Cart> realmResults = realm.where(Cart.class)
                         .equalTo("productId", id)
                         .findAll();
                 realmResults.deleteAllFromRealm();

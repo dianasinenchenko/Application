@@ -7,7 +7,7 @@ import io.realm.annotations.PrimaryKey;
  * Created by Diana on 25.06.2019.
  */
 
-public class Card extends RealmObject {
+public class Cart extends RealmObject {
 
     @PrimaryKey
     private long productId;
@@ -25,8 +25,8 @@ public class Card extends RealmObject {
         if (obj == this) {
             return true;
         }
-        if (obj instanceof Card) {
-            return ((Card)obj).getProductId() == getProductId();
+        if (obj instanceof Cart) {
+            return ((Cart)obj).getProductId() == getProductId();
         }
         return false;
     }

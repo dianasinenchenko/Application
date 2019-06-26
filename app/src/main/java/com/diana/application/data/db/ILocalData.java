@@ -1,5 +1,6 @@
 package com.diana.application.data.db;
 
+import com.diana.application.data.model.Cart;
 import com.diana.application.data.model.Product;
 
 import java.util.List;
@@ -16,6 +17,8 @@ public interface ILocalData {
     RealmResults<Product> getProductById(long id);
 
     RealmResults<Product> getProductByCategory(String category);
+
+    RealmResults<Cart> getCartByProduct(long id);
 
     void saveProduct(List<Product> product);
 
