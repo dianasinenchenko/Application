@@ -69,14 +69,16 @@ public class ProductListFragment extends BaseFragment {
         return binding.getRoot();
     }
 
-    private void inject(){
 
-        ((MainActivity) getActivity()
-        .getApplication()
-        .getIApplicationComponent()
-        .plusContextModule(new ContextModule(getActivity()))
-        .inject(this));
+
+    private void inject() {
+        ((MainActivity)getActivity()
+                .getApplication())
+                .getApplicationComponent()
+                .plusContextModule(new ContextModule(getActivity()))
+                .inject(this);
     }
+
 
     private void setUpRv(RecyclerView rvList) {
         linearLayoutManager = new LinearLayoutManager(getContext());

@@ -1,9 +1,11 @@
 package com.diana.application.data.di.component;
 
-import com.diana.application.MainActivity;
 import com.diana.application.data.di.module.Context;
 import com.diana.application.data.di.module.ContextModule;
+import com.diana.application.ui.ProductDetailsActivity;
 import com.diana.application.ui.ProductListFragment;
+import com.diana.application.ui.CategoryListFragment;
+import com.diana.application.ui.StartActivity;
 
 import dagger.Subcomponent;
 
@@ -15,9 +17,9 @@ import dagger.Subcomponent;
 @Context
 public interface IContextComponent {
 
-    void inject(MainActivity mainActivity);
-    void inject(ProductListFragment productListFragment);
+    void inject(StartActivity mainActivity);
+    void inject(ProductListFragment fragment);
     void inject(CategoryListFragment fragment);
-    void inject(ProductDetailActivity mainActivity);
+    void inject(ProductDetailsActivity mainActivity);
 
 }
