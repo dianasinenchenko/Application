@@ -1,7 +1,6 @@
-package com.diana.application.wm;
+package com.diana.application.vm;
 
 import android.databinding.ObservableArrayList;
-import android.databinding.ObservableField;
 import android.databinding.ObservableList;
 
 import com.diana.application.data.model.Category;

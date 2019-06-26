@@ -1,4 +1,4 @@
-package com.diana.application.wm;
+package com.diana.application.vm;
 
 import com.diana.application.data.model.Product;
 import com.diana.application.data.utils.INavigator;
@@ -7,12 +7,12 @@ import com.diana.application.data.utils.INavigator;
  * Created by Diana on 26.06.2019.
  */
 
-public class ProductItemMV {
+public class ProductItemVM {
 
     private Product product;
     private INavigator navigator;
 
-    public ProductItemMV(INavigator navigator) {
+    public ProductItemVM(INavigator navigator) {
         this.navigator = navigator;
     }
 

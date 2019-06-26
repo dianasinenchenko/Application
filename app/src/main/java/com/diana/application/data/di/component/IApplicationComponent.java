@@ -1,5 +1,6 @@
 package com.diana.application.data.di.component;
 
+import com.diana.application.data.di.module.ContextModule;
 import com.diana.application.data.di.module.RepositoryModule;
 
 import javax.inject.Singleton;
@@ -14,5 +15,6 @@ import dagger.Component;
 @Singleton
 public interface IApplicationComponent {
 
+    IContextComponent plusContextModule(ContextModule contextModule);
 
 }

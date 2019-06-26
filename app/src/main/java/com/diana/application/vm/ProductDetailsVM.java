@@ -1,8 +1,6 @@
-package com.diana.application.wm;
+package com.diana.application.vm;
 
-import android.databinding.Observable;
 import android.databinding.ObservableField;
-import android.databinding.ObservableList;
 import android.support.annotation.NonNull;
 
 import com.diana.application.data.model.Cart;

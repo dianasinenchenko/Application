@@ -1,5 +1,6 @@
 package com.diana.application.data.di.module;
 
+
 import com.diana.application.data.utils.INavigator;
 import com.diana.application.data.utils.IToast;
 import com.diana.application.data.utils.NavigatorImpl;
@@ -15,9 +16,9 @@ import dagger.Provides;
 @Module
 public class ContextModule {
 
-    private final Context context;
+    private final android.content.Context context;
 
-    public ContextModule(Context context) {
+    public ContextModule(android.content.Context context) {
         this.context = context;
     }
 
@@ -25,14 +26,14 @@ public class ContextModule {
     @Context
     public INavigator provideNavigator() {
 
-        return new NavigatorImpl(context);
+        return new NavigatorImpl( context);
     }
 
     @Provides
     @Context
-    public IToast provideToast(){
+    public IToast provideToast() {
 
-        return  new ToastImpl((android.content.Context) context);
+        return new ToastImpl((android.content.Context) context);
     }
 
 }

@@ -1,4 +1,4 @@
-package com.diana.application.wm;
+package com.diana.application.vm;
 
 import android.databinding.ObservableField;
 import android.support.annotation.NonNull;

@@ -1,12 +1,12 @@
 package com.diana.application.data.utils;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 
 import com.diana.application.R;
-import com.diana.application.data.di.module.Context;
 
 /**
  * Created by Diana on 26.06.2019.
@@ -21,6 +21,7 @@ public class NavigatorImpl implements INavigator {
         this.context = context;
         this.fragmentManager = ((AppCompatActivity) context).getSupportFragmentManager();
     }
+
 
     private void addToBackStack(Fragment fragment) {
         fragmentManager.beginTransaction()

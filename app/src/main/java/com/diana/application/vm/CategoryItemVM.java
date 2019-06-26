@@ -1,4 +1,4 @@
-package com.diana.application.wm;
+package com.diana.application.vm;
 
 import com.diana.application.data.model.Category;
 import com.diana.application.data.utils.INavigator;
